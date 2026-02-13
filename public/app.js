@@ -1,0 +1,4 @@
+// #region agent log
+fetch('http://127.0.0.1:7248/ingest/94fa9298-6a6f-4428-910d-9a0cfc8f7409',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'app.js:page-load',message:'PDF page context',data:{origin:window.location.origin,isInIframe:window!==window.top,referrer:document.referrer||'(none)'},timestamp:Date.now(),hypothesisId:'A'})}).catch(()=>{});
+document.getElementById('pdf-frame').addEventListener('load',function(){fetch('http://127.0.0.1:7248/ingest/94fa9298-6a6f-4428-910d-9a0cfc8f7409',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'app.js:iframe-load',message:'PDF iframe loaded',data:{src:document.getElementById('pdf-frame').src},timestamp:Date.now(),hypothesisId:'B'})}).catch(()=>{});});
+// #endregion
