@@ -50,3 +50,20 @@ body {
     min-height: 500px;
   }
 }
+
+@media (max-width: 768px) {
+  html {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  body {
+    overflow: auto;
+    position: relative;
+    min-height: 100vh;
+    -webkit-overflow-scrolling: touch;
+  }
+  #pdf-frame {
+    min-height: 100vh;
+    position: relative;
+  }
+}
